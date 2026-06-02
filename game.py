@@ -10,8 +10,15 @@ def load_json(file_path):
 def show_description(data, location):
     print(data[location]["description"])
 
+def gameplay(data, first_loc):
+    location = first_loc
+    while(True):
+        print("1 - Show actual location description")
+        print("q - Quit the game")
+        user_input = input("Choose your option: ")
+        if user_input == "1": show_description(data, location)
+        elif user_input == "q": return 
+
 data = load_json("game.json")
 
-location = data["Forgotten Crossroads"]["name"]
-print(location)
-show_description(data, location)
+gameplay(data, "Dirtmouth")
