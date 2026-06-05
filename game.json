@@ -1,32 +1,79 @@
 [
     {
-        "name" : "Dirtmouth",
-        "description" : "Dirtmouth, the Fading Town, is the first town on the way to Hallownest, located in the valley between the Howling Cliffs and Crystal Peak. In Hollow Knight, it initially has only one resident, but more bugs can return or move into town depending on certain events.",
-        "exits" : ["Crystal Peak", "Howling Cliffs", "Forgotten Crossroads"]
+        "name": "Dirtmouth",
+        "description": "Dirtmouth, the Fading Town, is the first town on the way to Hallownest.",
+        "exits": ["Crystal Peak", "Howling Cliffs", "Forgotten Crossroads"],
+        "npc": {
+            "name": "Old Sage",
+            "dialogue": "Courage is not found, it is recognized. Take this medallion and remember the word DREAM.",
+            "item": "Medallion of Courage",
+            "keyword": "DREAM"
+        }
     },
     {
         "name": "Forgotten Crossroads",
-        "description" : "Located right below the surface, the Forgotten Crossroads consists of many caverns and roads. Fossilised remains of bugs cover the surfaces of the caverns, with pale ferns growing through cracks in the ground.",
-        "exits" : ["Dirtmouth"]
+        "description": "Located right below the surface, the Forgotten Crossroads consists of many caverns and roads.",
+        "exits": ["Dirtmouth", "Greenpath", "Crystal Peak", "Resting Grounds"],
+        "npc": {
+            "name": "Forgotten Merchant",
+            "dialogue": "What word did the Old Sage teach you?",
+            "answer": "DREAM",
+            "item": "Forgotten Key",
+            "keyword": "CRYSTAL"
+        }
     },
     {
-        "name" : "Greenpath",
-        "description" : "Greenpath is an exuberant green cavern, composed of diverse vegetation, mossy valleys, and broad lakes of acid. These features are deeply reflected in its inhabitants, who developed a natural mossy camouflage, allowing them to perfectly blend in with their surroundings.",
-        "exits" : ["Forgotten Crossroads"]
+        "name": "Greenpath",
+        "description": "Greenpath is a lush cavern filled with vegetation, mossy valleys, and acidic lakes.",
+        "exits": ["Forgotten Crossroads", "Howling Cliffs"],
+        "npc": {
+            "name": "Flora Guardian",
+            "dialogue": "What is the word of the ancient crossroads?",
+            "answer": "CRYSTAL",
+            "item": "Ancient Flower",
+            "keyword": "ECHO"
+        }
     },
     {
-        "name" : "Crystal Peak",
-        "description" : "Crystal Peak contains extensive tunnels throughout the mountain which were used to mine its crystals. The crystals are present across the entire area, with some tunnels having crystals lining the top and bottom of the cavern. Conveyor belts can be found in many rooms which transport the crystal shards.",
-        "exits" : []
+        "name": "Crystal Peak",
+        "description": "Crystal Peak contains vast tunnels carved through shining crystal formations.",
+        "exits": ["Resting Grounds", "Forgotten Crossroads", "Dirtmouth"],
+        "npc": {
+            "name": "Miner",
+            "dialogue": "What echoes through the crystal tunnels?",
+            "answer": "ECHO",
+            "item": "Luminous Crystal",
+            "keyword": "MEMORY"
+        }
     },
     {
-        "name" : "Resting Grounds",
-        "description" : "Tombstones and monuments cover the caverns of the Resting Grounds. Before the Dream Nail has been acquired, the area is grey and relatively colourless. After obtaining the Dream Nail, the Resting Grounds becomes an area with a blue colour-tone and ghostly spirits floating throughout the foreground and backdrop.",
-        "exits" : []
+        "name": "Resting Grounds",
+        "description": "The Resting Grounds are filled with tombstones, monuments, and lingering spirits.",
+        "exits": ["Crystal Peak", "Forgotten Crossroads"],
+        "npc": {
+            "name": "Ancient Spirit",
+            "dialogue": "What remains after death?",
+            "answer": "MEMORY",
+            "item": "Dream Mask",
+            "keyword": "WIND"
+        }
     },
     {
-        "name" : "Howling Cliffs",
-        "description" : "A steep cliff bordering the wasteland outside the Pale King's domain, inhabited by small crawling and flying enemies. The ground is littered with husks and corpses of bugs.",
-        "exits" : []
+        "name": "Howling Cliffs",
+        "description": "A steep cliff at the edge of Hallownest, battered by endless winds.",
+        "exits": ["Dirtmouth", "Greenpath"],
+        "npc": {
+            "name": "Seal Guardian",
+            "dialogue": "What is the final word carried by the winds?",
+            "answer": "WIND",
+            "required_items": [
+                "Medallion of Courage",
+                "Forgotten Key",
+                "Ancient Flower",
+                "Luminous Crystal",
+                "Dream Mask"
+            ],
+            "ending": "The ancient seal shatters. The five relics shine together, revealing the path to the Heart of Hallownest. Your journey is complete."
+        }
     }
 ]
