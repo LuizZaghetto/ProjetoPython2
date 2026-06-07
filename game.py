@@ -233,9 +233,7 @@ Crystal   Forgotten Crossroads
  Peak          |
                |
         Resting Grounds
-
-=============================== ''')
-            print(f'current location: {location}')
+''')
 
         elif user_input == "q": return 
         else: 
