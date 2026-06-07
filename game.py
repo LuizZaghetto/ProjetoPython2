@@ -121,7 +121,44 @@ You received: {npc['item']}
 Wrong answer.''')
     return current_keyword
 
+def check_combat(data, location, inventory):
+    if "enemy" not in data[location]:
+        return True
 
+    else:
+        enemy = data[location]["enemy"]
+        if enemy['reward_item'] in inventory:
+            print(f"\nThe corpse of {enemy['name']} lies on the ground. The area is safe.")
+            return True
+
+        else:
+            print(f'''
+===============================
+ENEMY BLOCKING THE PATH: {enemy['name']}
+===============================
+{enemy['dialogue']}
+''')
+
+            if enemy['item_needed'] not in inventory:
+                print(f"You don't have the [{enemy['item_needed']}] to face this danger!")  
+                print("You are forced to retreat to Dirtmouth for safety!")
+                return False 
+
+            else:
+                print("1 - Attack with your Nail")
+                print("2 - Retreat")
+                
+                choice = input("\nChoose your action: ")
+                
+                if choice == "1":
+                    print(f"\nYou brandish your nail and strike the {enemy['name']} with bravery!")
+                    print(f"Victory! You defeated the {enemy['name']} and obtained: {enemy['reward_item']}!")
+                    inventory.append(enemy['reward_item'])
+                    return True
+
+                else:
+                    print("\nYou decided to take a step back and retreat.")
+                    return False
 
 def gameplay(data, first_loc):
     location = first_loc
@@ -146,14 +183,16 @@ Actual location: {location}
         if user_input == "1": 
             print('===============================')
             print('''
-Descripition: ''')
+Description: ''')
             show_description(data, location)
             print('===============================')
 
-
-
         elif user_input == "2": 
+            old_location = location
             location = travel(data, location)
+            if not check_combat(data, location, inventory):
+                location = old_location
+                
             show_description(data, location)
 
         elif user_input == '3':

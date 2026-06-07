@@ -20,6 +20,12 @@
             "answer": "DREAM",
             "item": "Forgotten Key",
             "keyword": "CRYSTAL"
+        },
+        "enemy": {
+            "name": "False Knight",
+            "dialogue": "A giant armored bug blocks your path holding a massive mace!",
+            "item_needed": "Medallion of Courage",
+            "reward_item": "Mantis Claw"
         }
     },
     {
@@ -32,6 +38,12 @@
             "answer": "CRYSTAL",
             "item": "Ancient Flower",
             "keyword": "ECHO"
+        },
+        "enemy": {
+            "name":"Moss Knight",
+            "dialogue": "A moss-covered knight draws his greatsword and shields the path ahead!",
+            "item_needed": "Mantis Claw",
+            "reward_item": "Lumafly Lantern"
         }
     },
     {
@@ -44,6 +56,12 @@
             "answer": "ECHO",
             "item": "Luminous Crystal",
             "keyword": "MEMORY"
+        },
+         "enemy": {
+            "name": "Crystal Guardian",
+            "dialogue": "A crystallized bug resting on a bench wakes up screaming, shooting searing lasers!",
+            "item_needed": "Lumafly Lantern",
+            "reward_item": "Monarch Wings"
         }
     },
     {
@@ -56,6 +74,12 @@
             "answer": "MEMORY",
             "item": "Dream Mask",
             "keyword": "WIND"
+        },
+        "enemy": {
+            "name": "Xero (Warrior Dream)",
+            "dialogue": "A lingering spirit summons spectral swords that float around him. Prepare to dodge!",
+            "item_needed": "Monarch Wings",
+            "reward_item": "Awakened Dream Nail"
         }
     },
     {
