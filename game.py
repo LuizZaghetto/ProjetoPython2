@@ -177,6 +177,7 @@ Actual location: {location}
         print("2 - Travel")
         print("3 - Talk to NPC")
         print("4 - Show inventory")
+        print("5 - Show world map")
         print("q - Quit the game\n")
 
         user_input = input("Choose your option: ")
@@ -215,7 +216,26 @@ Inventory:''')
                 print("Empty")
 
             print()
+        
+        elif user_input == '5':
+            print ('''
+===============================                  
+World map
+=============================== 
+                 
+          Howling Cliffs
+           /         \\
+          /           \\
+    Dirtmouth      Greenpath
+      /   \\           |
+     /     \\          |
+Crystal   Forgotten Crossroads
+ Peak          |
+               |
+        Resting Grounds
 
+=============================== ''')
+            print(f'current location: {location}')
 
         elif user_input == "q": return 
         else: 
