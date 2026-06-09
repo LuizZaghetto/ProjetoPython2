@@ -62,7 +62,7 @@ def talk_to_npc(data,location,inventory,current_keyword):
             print(f'''
 ===============================
 You received: {npc['item']}''')
-            print(f'New keyword learned: {npc['keyword']}')
+            print(f"New keyword learned: {npc['keyword']}")
         else: 
             print('''
 ===============================
